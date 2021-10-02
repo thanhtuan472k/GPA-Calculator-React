@@ -46,16 +46,10 @@ function App() {
       ? JSON.parse(localStorage.getItem("courses"))
       : [
           {
-            code: "MTH110",
+            code: "Môn yêu anh",
             grade: "A",
-            load: 3,
+            load: 2,
             id: 1,
-          },
-          {
-            code: "MTH112",
-            grade: "A",
-            load: 3,
-            id: 2,
           },
         ];
 
