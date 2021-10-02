@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.primary-text {
+  color: #00d2a7;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("https://res.cloudinary.com/du0zjoe91/image/upload/v1633168429/demo2_iwnetf.jpg");
+}
+
+.light header {
+  color: #000;
+}
+
+.dark {
+  background-color: #181818;
+}
+
+.dark header,
+.dark .bottom,
+.dark main .talk-container .talk {
+  color: #fff;
+}
+
+.light .bottom-background,
+.light footer {
+  background-color: #f4f4f4;
+}
+
+.dark .bottom-background,
+.dark footer {
+  background-color: #4f4e4e;
+  color: #fff;
+}
+
+.bottom,
+footer {
+  padding: 0 20px;
+}
+
+.light footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dark footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  a {
+    color: #000;
+  }
+}
+
+.shapes {
+  .ball {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: -30px;
+    top: 20px;
+    background: radial-gradient(
+      71.95% 71.95% at 62.8% 28.05%,
+      #ffffff 0%,
+      #923910 100%,
+      #e96d33 100%
+    );
+    transform: rotate(22.56deg);
+    border-radius: 50%;
+  }
+
+  .staircase {
+    position: absolute;
+    right: 200px;
+    top: 80px;
+    div {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 10px solid #9e9ec7;
+      border-left: none;
+      border-bottom: none;
+      &:nth-child(2) {
+        left: 50px;
+        top: 50px;
+      }
+      &:nth-child(3) {
+        left: 100px;
+        top: 100px;
+        border-right: none;
+      }
+    }
+  }
+}
+
+header {
+  padding: 0 10px;
+  padding-top: 20px;
+  h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    .icon {
+      margin-right: 5px;
+      display: inline-block;
+      transform: scale(0.7);
+    }
+  }
+}
+
+main {
+  .talk-container {
+    padding: 0 20px;
+    padding-bottom: 50px;
+    .talk {
+      max-width: 500px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.bottom {
+  padding-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+
+  .bottom-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(100px);
+  }
+
+  .bottom-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    .course-table-container {
+      width: 500px;
+      padding: 10px;
+      min-height: 200px;
+      color: #000;
+      background: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+
+      .course-table *:not(input):not(select) {
+        border: none;
+      }
+
+      th {
+        text-align: center;
+      }
+
+      .add-btn {
+        border: none;
+        outline: none;
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        background-color: transparent;
+        margin-right: 7%;
+      }
+    }
+
+    .calculate-btn {
+      padding: 5px 40px;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-weight: 800;
+      background-color: #4158d0;
+      background-image: linear-gradient(
+        43deg,
+        #4158d0 0%,
+        #c850c0 46%,
+        #ffcc70 100%
+      );
+      border-radius: 20px;
+    }
+
+    .gpa {
+      font-weight: 800;
+    }
+  }
+  .closing-comment {
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+footer {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  margin-top: -1rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+  a {
+    text-decoration: none;
+    color: #2a19e5;
+  }
+}
+
+@media screen and(max-width:600px) {
+  .shapes {
+    display: none;
+  }
+
+  header.center,
+  .talk-container.center {
+    justify-content: start;
+  }
+
+  header h1 .icon {
+    margin: 0;
+  }
+
+  .bottom .bottom-inner .course-table-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+.course_row input,
+.course_row select {
+  border-radius: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex > * {
+  flex: 1 1 0;
+}
+
+.flex svg {
+  cursor: pointer;
+}
